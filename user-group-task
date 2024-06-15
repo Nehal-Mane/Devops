@@ -1,0 +1,18 @@
+1. User Group Creation
+Create group: sudo groupadd max01(max01 group name)
+Create user in the group: sudo useradd -m -G max01 test01(here test01 is username)
+2. How many users are created on a machine?
+for all user infomation: getnet passwd
+Exectly how many users created on machine: getnet passwd |  wc -l
+3. What is the path of the password file in Ubuntu?
+path /etc/passwd: sudo cat /etc/passwd
+4. File quota
+first install quota: sudo apt install quota
+for user: quota -u max01(here max01 username)
+for checking: quota -v max01
+for group: quota -g test01(here test01 is group name)
+for checking: quota -v test01
+
+nehal maneMay 22
+5. Ubuntu how many current user active
+number of active user: who | wc -l
